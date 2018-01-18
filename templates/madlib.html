@@ -1,10 +1,18 @@
-<html>
-<head>
-    <title>Madlib Creation</title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% block title %}Madlib Creation!{% endblock %}
+{% block content %}
+    <div class="madlib">
     There once was a {{ color }} {{ noun }} sitting in the Hackbright Lab. When {{ name }} went to pick it up, it burst into flames in a totally
-    {{ adj }} way. {{ name }}'s {{ time }} was off to a bad start. At least {{ name }}
-    could go home and pet her {{ animal }}.
-</body>
-</html>
+    {{ adj }} way. {{ name }}'s {{ time }} was off to a bad start. At least {{ name }} could go home and pet her
+
+    {% if animals|length == 1 %}
+        {{ animals[0] }}.
+    {% elif animals|length == 2 %}
+        {{ animals[0] }} and {{ animals[1] }}.
+    {% else %}
+        {% for i in range(animals|length - 1) %}
+            {{ animals[i] }},
+        {% endfor %}
+        and {{ animals[-1] }}.
+    {% endif %}</div>
+{% endblock %}

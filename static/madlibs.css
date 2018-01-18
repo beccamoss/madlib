@@ -1,0 +1,36 @@
+h1 {
+    color: blue;
+    font-family: sans-serif;
+    margin-left: 20px;
+}
+
+.mytext {
+    font-size: 16px;
+    font-family: sans-serif;
+    line-height: 50px;
+    margin-left: 20px;
+}
+
+.madlib {
+    font-size: 16px;
+    font-family: sans-serif;
+    line-height: 30px;
+    margin-left: 20px;
+}
+
+body {
+    margin:0;
+}
+footer {
+    color: blue;
+    font-size: 16px;
+    font-family: sans-serif;
+    position:fixed;
+    padding-left: 20px;
+    padding-top: 10px;
+    bottom: 0;
+    height: 30px;
+    width: 100%;
+    background-color: gray;
+    /*margin-top: 200px;*/
+}
